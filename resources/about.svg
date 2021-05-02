@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375002"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="about.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2018"
+     inkscape:window-height="1711"
+     id="namedview16"
+     showgrid="false"
+     inkscape:zoom="3.36"
+     inkscape:cx="150"
+     inkscape:cy="150"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:0.95;font-family:sans-serif;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="74.964127"
+       y="11.590211"
+       id="text844"><tspan
+         id="tspan842"
+         x="74.964127"
+         y="11.590211"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Ultra-Bold';text-align:end;text-anchor:end;stroke-width:0.264583">Modular Font</tspan><tspan
+         x="74.964127"
+         y="21.770096"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Ultra-Bold';text-align:end;text-anchor:end;stroke-width:0.264583"
+         id="tspan846">Editor K</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="3.9734921"
+       y="61.491741"
+       id="text850"><tspan
+         id="tspan848"
+         x="3.9734921"
+         y="61.491741"
+         style="font-size:3.52778px;stroke-width:0.264583">© 2020–2021 Fredrick R. Brennan</tspan><tspan
+         x="3.9734921"
+         y="65.901466"
+         style="font-size:3.52778px;stroke-width:0.264583"
+         id="tspan852">© 2021 Matthew Blanchard</tspan><tspan
+         x="3.9734921"
+         y="70.311188"
+         style="font-size:3.52778px;stroke-width:0.264583"
+         id="tspan854">For other authors, see AUTHORS in each</tspan><tspan
+         x="3.9734921"
+         y="74.720909"
+         style="font-size:3.52778px;stroke-width:0.264583"
+         id="tspan856">module's GitHub repository.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="31.577341"
+       y="29.741735"
+       id="text850-9"><tspan
+         x="31.577341"
+         y="29.741735"
+         style="font-size:3.52778px;stroke-width:0.264583"
+         id="tspan856-9">https://github.com/MFEK</tspan></text>
+  </g>
+</svg>

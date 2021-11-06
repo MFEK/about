@@ -9,17 +9,18 @@
 )]
 
 // Cargo.toml comments say what crates are used for what.
-#[macro_use]
-extern crate log;
-extern crate env_logger;
-extern crate skulpin;
-extern crate sdl2;
+use log::warn;
+use env_logger;
+use skulpin;
+use sdl2;
+use image;
 
-use sdl2::keyboard::Keycode;
 use sdl2::{
     event::{Event, WindowEvent},
-    keyboard::Mod,
+    keyboard::{Keycode, Mod},
     video::Window,
+    pixels::PixelFormatEnum,
+    surface::Surface,
     Sdl,
 };
 pub use skulpin::skia_safe;
@@ -130,7 +131,7 @@ fn initialize_sdl() -> (Sdl, Window) {
         height: HEIGHT,
     };
 
-    let window = video_subsystem
+    let mut window = video_subsystem
         .window(
             &format!("About MFEK"),
             logical_size.width,
@@ -143,22 +144,27 @@ fn initialize_sdl() -> (Sdl, Window) {
         .build()
         .expect("Failed to create window");
 
-    /* TODO: Fix icon. 
-    let logo = include_bytes!("../doc/logo.png");
-    let im = image::load_from_memory_with_format(logo, image::ImageFormat::Png)
+    let logo = include_bytes!("../resources/logo.png");
+
+    let mut im = image::load_from_memory_with_format(logo, image::ImageFormat::Png)
         .unwrap()
-        .into_rgb8();
-    let mut bytes = im.into_vec();
-    let surface = Surface::from_data(
-        &mut bytes,
-        701,
-        701,
-        701 * 3,
-        sdl2::pixels::PixelFormatEnum::RGB888,
-    )
-    .unwrap();
+        .into_rgba8();
+
+    // SDL2's pixel formats are not byte-by-byte, but rather word-by-word, where the words are each
+    // 32 bits long. So RGBA8888 means a 32-bit word where 8 bits are R, G, B and A. However,
+    // SDL2's words are not big endian, they are little endian, so we need to reverse them.
+    im.chunks_exact_mut(4).for_each(|pixel: &mut _| {
+        let oldpixel: [u8; 4] = [pixel[0], pixel[1], pixel[2], pixel[3]];
+        pixel[0] = oldpixel[3];
+        pixel[1] = oldpixel[2];
+        pixel[2] = oldpixel[1];
+        pixel[3] = oldpixel[0];
+    });
+
+    let surface = Surface::from_data(&mut im, 512, 512, 512 * 4, PixelFormatEnum::RGBA8888)
+        .expect("Failed to create SDL2 Surface");
+
     window.set_icon(surface);
-    */
 
     (sdl_context, window)
 }

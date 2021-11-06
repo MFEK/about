@@ -15,6 +15,7 @@ log = "0.4.11"
 env_logger = "0.8.3"
 # SVG
 lazy_static = "1.4"
+image = { version = "0.23", features = ["png"], default-features = false }
 
 ## MFEK crates
 mfek-ipc = { git = "https://github.com/MFEK/ipc.rlib" }

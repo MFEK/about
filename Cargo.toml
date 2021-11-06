@@ -16,6 +16,9 @@ env_logger = "0.8.3"
 # SVG
 lazy_static = "1.4"
 
+## MFEK crates
+mfek-ipc = { git = "https://github.com/MFEK/ipc.rlib" }
+
 [profile.release]
 opt-level = 'z'
 lto = true

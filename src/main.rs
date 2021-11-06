@@ -24,6 +24,7 @@ use sdl2::{
 };
 pub use skulpin::skia_safe;
 use skulpin::{rafx::api::RafxError, rafx::api::RafxExtents2D, LogicalSize, RendererBuilder};
+use mfek_ipc;
 
 use std::collections::HashSet;
 use std::time::Instant;
@@ -33,6 +34,14 @@ pub mod renderer;
 
 static WIDTH: u32 = 600;
 static HEIGHT: u32 = 300;
+
+static INFO: &str = r#"Modular Font Editor K (MFEK)
+(c) 2020-2021 Fredrick R. Brennan
+(c) 2021 Matthew Blanchard
+MFEK is modular software. For other authors, see AUTHORS file in each module's GitHub repository.
+Your MFEK distribution may contain non-official modules not listed below.
+
+Modules found in your $PATH:"#;
 
 fn main() {
     env_logger::init();
@@ -48,6 +57,16 @@ fn main() {
 
     let mut i = Wrapping(0usize);
     let start = Instant::now();
+
+    eprintln!("{}", INFO);
+    for module in ["glif", "metadata", "stroke", "init", "about"] {
+        let (ok, _) = mfek_ipc::module_available(module.into());
+        if ok.assert() {
+            eprintln!("MFEK{} (OK)", module);
+        } else {
+            eprintln!("MFEK{} (NG)", module);
+        }
+    }
 
     'main_loop: loop {
         // Create a set of pressed Keys.

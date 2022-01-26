@@ -1,24 +1,30 @@
 [package]
 name = "MFEKabout"
-version = "0.1.0"
+version = "0.1.0-beta2"
 authors = ["Fredrick Brennan <copypaste@kittens.ph>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-skulpin = { version = "0.13.0" }
-skulpin-renderer = "0.13.0"
-sdl2 = { version = ">=0.34", features = ["bundled", "static-link", "raw-window-handle"] }
+skulpin = { git = "https://github.com/MFEK/skulpin.rlib" }
+skulpin-renderer = { git = "https://github.com/MFEK/skulpin.rlib" }
+sdl2 = { version = "0.35", features = ["raw-window-handle"] }
 # Logging
-log = "0.4.11"
-env_logger = "0.8.3"
+log = "0.4"
+env_logger = "0.8"
 # SVG
 lazy_static = "1.4"
 image = { version = "0.23", features = ["png"], default-features = false }
 
 ## MFEK crates
 mfek-ipc = { git = "https://github.com/MFEK/ipc.rlib" }
+
+[features]
+default = []
+sdl2-static = ["sdl2/bundled", "sdl2/static-link"]
+sdl2-dynamic = []
+reproducible-build = ["mfek-ipc/reproducible-build"]
 
 [profile.release]
 opt-level = 'z'

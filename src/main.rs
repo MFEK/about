@@ -4,43 +4,38 @@
 #![allow(non_snake_case)] // for our name MFEKglif
 
 // Cargo.toml comments say what crates are used for what.
-use log::warn;
 use env_logger;
-use skulpin;
-use sdl2;
 use image;
+use log::warn;
+use sdl2;
+use skulpin;
 
-use sdl2::{
-    event::{Event, WindowEvent},
-    keyboard::{Keycode, Mod},
-    video::Window,
-    pixels::PixelFormatEnum,
-    surface::Surface,
-    Sdl,
-};
-pub use skulpin::skia_safe;
-use skulpin::{rafx::api::RafxError, rafx::api::RafxExtents2D, LogicalSize, RendererBuilder};
 use mfek_ipc;
+use sdl2::event::Event;
+use sdl2::keyboard::Keycode;
+use sdl2::pixels::PixelFormatEnum;
+use sdl2::surface::Surface;
+use sdl2::video::Window;
+use skulpin::rafx::api::{RafxError, RafxExtents2D};
+use skulpin::skia_safe as skia;
+use skulpin::{LogicalSize, RendererBuilder};
 
 use std::collections::HashSet;
-use std::time::Instant;
+use std::env;
 use std::num::Wrapping;
+use std::time::Instant;
 
-pub mod renderer;
-
-static WIDTH: u32 = 600;
-static HEIGHT: u32 = 300;
-
-static INFO: &str = r#"Modular Font Editor K (MFEK)
-(c) 2020-2021 Fredrick R. Brennan
-(c) 2021 Matthew Blanchard
-MFEK is modular software. For other authors, see AUTHORS file in each module's GitHub repository.
-Your MFEK distribution may contain non-official modules not listed below.
-
-Modules found in your $PATH:"#;
+mod consts;
+use consts::*;
+mod renderer;
 
 fn main() {
     env_logger::init();
+    mfek_ipc::header("about");
+    if env::args().any(|a| a.contains("--version")) {
+        println!(env!("CARGO_PKG_VERSION"));
+        std::process::exit(0);
+    }
 
     let (sdl_context, window) = initialize_sdl();
 
@@ -54,13 +49,22 @@ fn main() {
     let mut i = Wrapping(0usize);
     let start = Instant::now();
 
-    eprintln!("{}", INFO);
+    println!("{}{}", MFEK, INFO);
     for module in ["glif", "metadata", "stroke", "init", "about"] {
-        let (ok, _) = mfek_ipc::module_available(module.into());
-        if ok.assert() {
-            eprintln!("MFEK{} (OK)", module);
+        if let Ok((mfek_ipc::module::Version::OutOfDate(Some(mut v)), _)) =
+            mfek_ipc::module::available(module.into(), "_")
+        {
+            if v.chars().nth(0) == Some('v') {
+                v.remove(0);
+            }
+            println!(
+                "MFEK{} ({}, v{})",
+                module,
+                OK,
+                if v.len() == 0 { "???" } else { v.as_str() }
+            );
         } else {
-            eprintln!("MFEK{} (NG)", module);
+            println!("MFEK{} ({})", module, NG);
         }
     }
 
@@ -78,12 +82,12 @@ fn main() {
             // intertwined in command handling
             match &event {
                 Event::Quit { .. } => break 'main_loop,
-                Event::KeyDown {
-                    keycode: Some(Keycode::Q),
-                    keymod: km,
-                    ..
-                } => {
-                    if km.contains(Mod::LCTRLMOD) || km.contains(Mod::RCTRLMOD) {
+                Event::KeyDown { keycode, .. } => {
+                    if (*keycode == Some(Keycode::Q)
+                        && (keys_down.contains(&Keycode::LCtrl)
+                            || keys_down.contains(&Keycode::RCtrl)))
+                        || *keycode == Some(Keycode::Escape)
+                    {
                         break 'main_loop;
                     }
                 }
@@ -101,7 +105,7 @@ fn main() {
 
         let drew = renderer.draw(extents, 1.0, |canvas, _coordinate_system_helper| {
             let elapsed = start.elapsed();
-            renderer::render_frame(canvas, Wrapping((elapsed.as_millis() / 45) % 180).0);
+            renderer::render_frame(canvas, Wrapping((elapsed.as_millis() / 36) % 180).0);
         });
 
         i += Wrapping(1usize);
@@ -112,7 +116,7 @@ fn main() {
     }
 }
 
-fn initialize_sdl() -> (Sdl, Window) {
+fn initialize_sdl() -> (sdl2::Sdl, Window) {
     // SDL initialization
     let sdl_context = sdl2::init().expect("Failed to initialize sdl2");
     let video_subsystem = sdl_context
@@ -172,12 +176,12 @@ fn initialize_skulpin_renderer(sdl_window: &Window) -> Result<skulpin::Renderer,
         height: window_height,
     };
 
-    let scale_to_fit = skulpin::skia_safe::matrix::ScaleToFit::Start;
-    let visible_range = skulpin::skia_safe::Rect {
+    let scale_to_fit = skia::matrix::ScaleToFit::Start;
+    let visible_range = skia::Rect {
         left: 0.0,
-        right: WIDTH as f32,
+        right: WIDTH as f32 / 3.,
         top: 0.0,
-        bottom: HEIGHT as f32,
+        bottom: HEIGHT as f32 / 3.,
     };
 
     let renderer = RendererBuilder::new()

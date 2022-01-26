@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="300"
    height="300"
    viewBox="0 0 79.374998 79.375002"
    version="1.1"
    id="svg8"
    sodipodi:docname="about.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+   inkscape:version="1.2-dev (f22b781, 2022-01-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -23,19 +23,30 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2018"
-     inkscape:window-height="1711"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
      id="namedview16"
      showgrid="false"
-     inkscape:zoom="3.36"
-     inkscape:cx="150"
-     inkscape:cy="150"
+     inkscape:zoom="2"
+     inkscape:cx="158.5"
+     inkscape:cy="169.25"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="layer1"
+     inkscape:pagecheckerboard="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:blackoutopacity="0.0" />
   <defs
-     id="defs2" />
+     id="defs2">
+    <rect
+       x="66"
+       y="188.5"
+       width="282"
+       height="101"
+       id="rect22849" />
+  </defs>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -44,7 +55,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,49 +62,108 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:0.95;font-family:sans-serif;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.5833px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:small-caps;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="74.964127"
        y="11.590211"
        id="text844"><tspan
-         id="tspan842"
-         x="74.964127"
-         y="11.590211"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Ultra-Bold';text-align:end;text-anchor:end;stroke-width:0.264583">Modular Font</tspan><tspan
-         x="74.964127"
-         y="21.770096"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Ultra-Bold';text-align:end;text-anchor:end;stroke-width:0.264583"
-         id="tspan846">Editor K</tspan></text>
+         sodipodi:role="line"
+         x="0"
+         y="0"
+         id="tspan39493"><tspan
+           id="tspan842"
+           x="74.964127"
+           y="11.590211"
+           style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.5833px;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:small-caps;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.264583" /></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="3.9734921"
        y="61.491741"
        id="text850"><tspan
-         id="tspan848"
+         sodipodi:role="line"
          x="3.9734921"
          y="61.491741"
-         style="font-size:3.52778px;stroke-width:0.264583">© 2020–2021 Fredrick R. Brennan</tspan><tspan
-         x="3.9734921"
-         y="65.901466"
-         style="font-size:3.52778px;stroke-width:0.264583"
-         id="tspan852">© 2021 Matthew Blanchard</tspan><tspan
-         x="3.9734921"
-         y="70.311188"
-         style="font-size:3.52778px;stroke-width:0.264583"
-         id="tspan854">For other authors, see AUTHORS in each</tspan><tspan
-         x="3.9734921"
-         y="74.720909"
-         style="font-size:3.52778px;stroke-width:0.264583"
-         id="tspan856">module's GitHub repository.</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print'"
+         id="tspan18078" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="31.577341"
-       y="29.741735"
-       id="text850-9"><tspan
-         x="31.577341"
-         y="29.741735"
-         style="font-size:3.52778px;stroke-width:0.264583"
-         id="tspan856-9">https://github.com/MFEK</tspan></text>
+       style="font-style:normal;font-weight:normal;font-size:10.3465px;line-height:0.95;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.258662"
+       x="76.998642"
+       y="10.799245"
+       id="text48015"
+       transform="scale(0.97762091,1.0228914)"><tspan
+         sodipodi:role="line"
+         id="tspan48013"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.3465px;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:small-caps;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.258662"
+         x="76.998642"
+         y="10.799245">Modular Font</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.3465px;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:small-caps;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;stroke-width:0.258662"
+         x="76.998642"
+         y="20.751356"
+         id="tspan52979">Editor K</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text22847"
+       style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="4.2333307"
+       y="53.307346"><tspan
+         sodipodi:role="line"
+         id="tspan2228"
+         x="4.2333307"
+         y="68.74427"><tspan
+           style="font-style:italic;font-weight:900;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print Heavy Italic';stroke-width:0.264583"
+           id="tspan131047">© 202<tspan
+   style="letter-spacing:0.264583px"
+   id="tspan3591">0</tspan>-2022 <tspan
+   style="letter-spacing:-0.410104px"
+   id="tspan1792">F</tspan>redrick R. Brennan &amp;
+<tspan
+   style="fill:none"
+   id="tspan5839">© 202</tspan><tspan
+   style="letter-spacing:0.264583px;fill:none"
+   id="tspan5021">0</tspan><tspan
+   style="fill:none"
+   id="tspan5841">-2022 </tspan>MFEK Authors
+</tspan><tspan
+           style="font-style:italic;font-weight:600;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print Semi-Bold Italic';stroke-width:0.264583"
+           id="tspan131061">
+</tspan><tspan
+           style="font-style:italic;font-weight:600;font-size:3.175px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print Semi-Bold Italic';letter-spacing:-0.132292px;stroke-width:0.264583"
+           id="tspan131065">F</tspan><tspan
+           dx="-0.43127087"
+           style="font-style:italic;font-weight:600;font-size:3.175px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print Semi-Bold Italic';letter-spacing:0px;stroke-width:0.264583"
+           id="tspan131067">o</tspan><tspan
+           style="font-style:italic;font-weight:600;font-size:3.175px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print Semi-Bold Italic';stroke-width:0.264583"
+           id="tspan131069">r all authors, see AUTHORS and/or LICENSE</tspan></tspan><tspan
+         sodipodi:role="line"
+         id="tspan2230"
+         x="4.2333307"
+         y="73.594971"><tspan
+           style="font-style:italic;font-weight:600;font-size:3.175px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print Semi-Bold Italic';stroke-width:0.264583"
+           id="tspan131073">file in each module's GitHub repository.</tspan></tspan></text>
+    <g
+       id="g91309"
+       transform="translate(-0.85977956)">
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="31.886927"
+         y="27.732166"
+         id="text850-9"><tspan
+           x="31.886927"
+           y="27.732166"
+           style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-size:3.52778px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print, Heavy Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           id="tspan856-9">&lt; https:<tspan
+   style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-size:3.52778px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print, Heavy Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-1.12713px"
+   id="tspan9772">/</tspan><tspan
+   id="tspan13212"
+   style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-size:3.52778px;font-family:'FRB American Print';-inkscape-font-specification:'FRB American Print, Heavy Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.264583px">/</tspan>github.com/MFEK &gt;</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 35.15651,28.24427 H 73.355728"
+         id="path87876"
+         sodipodi:nodetypes="cc" />
+    </g>
   </g>
 </svg>

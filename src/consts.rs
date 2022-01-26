@@ -5,7 +5,7 @@ pub(crate) static WIDTH: u32 = 1800;
 pub(crate) static HEIGHT: u32 = 900;
 
 #[cfg(target_family = "unix")]
-pub(crate) static MFEK: &str = "\x1B[2J\x1B[38;5;5m\x1B[1mModular Font Editor K (MFEK)\x1B[0m\n";
+pub(crate) static MFEK: &str = "\x1B[38;5;5m\x1B[1mModular Font Editor K (MFEK) 〜　〜　:;(∩•́Θ•̀∩);: ﾘﾅｯｸｽ最高!\x1B[0m\n";
 #[cfg(target_family = "windows")]
 pub(crate) static MFEK: &str = "Modular Font Editor K (MFEK)\n";
 

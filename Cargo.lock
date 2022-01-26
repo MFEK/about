@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "MFEKabout"
-version = "0.1.0-beta2"
+version = "0.1.0-beta3"
 dependencies = [
  "env_logger 0.8.4",
  "image",

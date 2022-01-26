@@ -1,5 +1,7 @@
 # MFEKabout
 
+![](/doc/Screenshot.png)
+
 Note: This program generates the about screen. For general information about the project, see the [docs](https://github.com/MFEK/docs/) repository.
 
 MFEK about screen. Uses Skulpin like MFEKglif.

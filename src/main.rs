@@ -31,7 +31,6 @@ mod renderer;
 
 fn main() {
     env_logger::init();
-    mfek_ipc::header("about");
     if env::args().any(|a| a.contains("--version")) {
         println!(env!("CARGO_PKG_VERSION"));
         std::process::exit(0);
@@ -49,7 +48,9 @@ fn main() {
     let mut i = Wrapping(0usize);
     let start = Instant::now();
 
-    println!("{}{}", MFEK, INFO);
+    mfek_ipc::display_header("about");
+    print!("{}", MFEK);
+    println!("{}", INFO);
     for module in ["glif", "metadata", "stroke", "init", "about"] {
         if let Ok((mfek_ipc::module::Version::OutOfDate(Some(mut v)), _)) =
             mfek_ipc::module::available(module.into(), "_")
